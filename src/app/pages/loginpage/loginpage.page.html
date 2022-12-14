@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>TeLlevoAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+<br>
+<br>
+<br>
+<ion-content class="ion-padding">
+  
+  <form #frm="ngForm" (ngSubmit)="onSubmit()" >
+    <ion-text color="primary" class="ion-text-center">
+      <h1>iniciar sesión </h1>
+    </ion-text>
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input type="text" name="usuario" [(ngModel)]="usuario.username" clearInput   required></ion-input>
+    </ion-item>
+    <br>
+    <br>
+    <ion-item>
+      <ion-label position="floating">Clave</ion-label>
+      <ion-input type="password" required name="password" [(ngModel)]="usuario.password" ></ion-input>
+    </ion-item>
+    <br>
+    <br>
+    <br>
+    <br>
+    <ion-button color="primary" type="submit" expand="block" class="ion-margin-top" [disabled]="frm.invalid">
+      Acceder
+    </ion-button>
+    
+    
+  </form>
+  <ion-button href="register" color="primary" type="submit" expand="block" class="ion-margin-top" >
+    Registrarte
+  </ion-button>
+  <br>
+  <ion-item>
+    <ion-checkbox slot="start"></ion-checkbox>
+    <ion-label>Guardar contraseña</ion-label>
+  </ion-item>
+  <ion-breadcrumbs color="info">
+    <ion-breadcrumb href="/home">Home</ion-breadcrumb>
+    <ion-breadcrumb href="/stats">Stats</ion-breadcrumb>
+    <ion-breadcrumb href="/pag4">Viajes</ion-breadcrumb>
+   
+    
+  </ion-breadcrumbs>
+</ion-content>

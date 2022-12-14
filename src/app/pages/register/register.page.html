@@ -1,0 +1,87 @@
+<ion-header [translucent]="true">
+  
+  <ion-toolbar color="primary">
+    
+    <ion-icon slot="end" class="ion-padding"></ion-icon>
+    <ion-buttons slot="end">
+      
+
+    </ion-buttons>
+    <ion-title color="primary">
+      TeLlevoAPP 
+    </ion-title>
+    <ion-text slot="center">
+      
+    </ion-text>
+    
+  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  
+  <ion-text color="info" class="ion-text-center">
+    <h1>Registrate </h1>
+  </ion-text>
+  <br>
+  <br>
+  <br>
+
+   <form >
+    <ion-item color="secondary">
+      <ion-label position="floating">Nombre <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input color="dark" type="text"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item color="success">
+      <ion-label position="floating">Contraseña <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input color="dark"  type="text"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item color="success">
+      <ion-label position="floating">Confirmar Contraseña <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input color="dark"  type="text"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item color="primary">
+      <ion-label position="floating">Gmail <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input color="dark" type="text"></ion-input>
+    </ion-item>
+    <br> 
+    <br>
+   
+    <br>
+    <ion-item>
+      <ion-checkbox slot="start"></ion-checkbox>
+      <ion-label>Aceptar terminos y condiciones</ion-label>
+    </ion-item>
+    <br>
+    <ion-buttons slot="primary">
+      <ion-button href="/loginpage" >
+        
+        <h3>Registrar</h3><ion-icon name="checkbox-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+   </form>
+
+   <ion-fab horizontal="start" vertical="bottom" slot="fixed">
+    <ion-fab-button color="dark">
+      <ion-icon md="caret-up" ios="chevron-up-circle-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="light">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="logo-vimeo"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="logo-google"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

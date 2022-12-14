@@ -1,0 +1,122 @@
+<ion-header [translucent]="true">
+  
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver" mode="ios" defaultHref="dashboard"></ion-back-button>
+    </ion-buttons>
+    <ion-icon slot="end" class="ion-padding"></ion-icon>
+    <ion-buttons slot="end">
+    
+    </ion-buttons>
+    <ion-title color="dark" >
+      TeLlevoAPP 
+    </ion-title>
+    <ion-text slot="center">
+      
+    </ion-text>
+    
+  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <h1 class="ion-padding" color="light">Has tu viaje</h1>
+  </ion-card>
+  
+  <br>
+ 
+    
+   <form [formGroup]="viaje" >
+    <ion-item>
+      <ion-label position="floating">Name <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required formControlName="name" [(ngModel)]="tareaEditando.nombre" type="text"></ion-input>
+      
+        <ng-container *ngIf="viaje.get('name').hasError('required')">
+          <ion-note slot="error">No puede estar vacio</ion-note>
+
+        </ng-container>
+     
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Patente de su vehiculo <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required formControlName="patente" [(ngModel)]="tareaEditando.patente" type="text"></ion-input>
+      
+        <ng-container *ngIf="viaje.get('patente').hasError('required')">
+          <ion-note slot="error">No puede estar vacio</ion-note>
+
+        </ng-container>
+     
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Marca del vehiculo <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required formControlName="marca" [(ngModel)]="tareaEditando.marca" type="text"></ion-input>
+     
+        <ng-container *ngIf="viaje.get('marca').hasError('required')">
+          <ion-note slot="error">No puede estar vacio</ion-note>
+
+        </ng-container>
+     
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Descripcion <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required formControlName="descripcion"[(ngModel)]="tareaEditando.descripcion" type="text"></ion-input>
+      
+        <ng-container *ngIf="viaje.get('descripcion').hasError('required')">
+          <ion-note slot="error">No puede estar vacio</ion-note>
+
+        </ng-container>
+      
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Valor <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required formControlName="valor"[(ngModel)]="tareaEditando.valor" type="number"></ion-input>
+      
+        <ng-container *ngIf="viaje.get('valor').hasError('required')">
+          <ion-note slot="error">No puede estar vacio</ion-note>
+
+        </ng-container>
+      
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Puestos disponibles <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required formControlName="puestos"[(ngModel)]="tareaEditando.puestos" type="number"></ion-input>
+      
+        <ng-container *ngIf="viaje.get('puestos').hasError('required')">
+          <ion-note slot="error">No puede estar vacio</ion-note>
+
+        </ng-container>
+      
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Hora salida <ion-text color="danger">*</ion-text></ion-label>
+      <br>
+      <br>
+      <ion-input required formControlName="hora"[(ngModel)]="tareaEditando.hora" type="time"></ion-input>
+      
+        <ng-container *ngIf="viaje.get('hora').hasError('required')">
+          <ion-note slot="error">No puede estar vacio</ion-note>
+
+        </ng-container>
+      
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Telefono <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required formControlName="telefono"[(ngModel)]="tareaEditando.telefono" type="number"></ion-input>
+      
+        <ng-container  *ngIf="viaje.get('telefono').hasError('required')">
+          <ion-note slot="error">No puede estar vacio</ion-note>
+        </ng-container>
+      
+    </ion-item>
+    
+ <br>
+ <br>
+    <ion-button expand="block" color="dark" (click)="gohome()" (click)="clicBotonInsertar()" (click)="presentAlert()" [disabled]="!viaje.valid">Añadir viaje</ion-button>
+   </form>
+    
+  
+  
+</ion-content>
+
+

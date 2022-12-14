@@ -1,0 +1,35 @@
+<ion-header class="ion-padding">
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver" mode="ios" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>TeLlevoApp</ion-title>
+    
+  </ion-toolbar>
+ 
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col text-center>
+         Perfil de usuario
+  
+          <p>Usuario : <strong>{{ userDetail }}</strong></p>
+        </ion-col>
+      </ion-row>
+      
+      
+    </ion-grid>
+    
+  </ion-card>
+  <ion-button  type="submit" color="danger"   (click)="signOut()">Cerrar Sesion</ion-button>
+  
+
+  
+  
+
+
+
+</ion-content>

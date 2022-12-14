@@ -1,0 +1,76 @@
+<ion-header [translucent]="true">
+  
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver" mode="ios" defaultHref="dashboard"></ion-back-button>
+    </ion-buttons>
+    <ion-icon slot="end" class="ion-padding"></ion-icon>
+    <ion-buttons slot="end">
+      <ion-button (click)="abrirMenu()">
+        <ion-icon name="apps"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="dark" >
+      TeLlevoAPP 
+    </ion-title>
+    <ion-text slot="center">
+      
+    </ion-text>
+    
+  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-text color="dark" class="ion-text-center">
+    <h1>Lista de viajes </h1>
+  </ion-text>
+ 
+  <ion-list *ngFor="let documentTarea of tusviajes">
+    <ion-item (click)="selecTarea(documentTarea)" color="light">
+      
+      <ion-grid >
+        <ion-card-content color="dark">
+        <ion-row aria-required="true">
+          <p>Nombre usuario : {{documentTarea.data.nombre}}</p>
+        </ion-row>
+        <ion-row >
+          <p >Marca :{{documentTarea.data.marca}}</p>
+        </ion-row>
+        <ion-row >
+          <p >Patente :{{documentTarea.data.patente}}</p>
+        </ion-row>
+        <ion-row>
+          <p>Puestos disponibles :{{documentTarea.data.puestos}}</p>
+        </ion-row>
+        <ion-row>
+          <p>N° telefono :{{documentTarea.data.telefono}}</p>
+        </ion-row>
+        <ion-row>
+          <p>Hora salida :{{documentTarea.data.hora}}</p>
+        </ion-row>
+        <ion-row>
+          <p>Valor :{{documentTarea.data.valor}}</p>
+        </ion-row>
+        <ion-row>
+          <p>Descripcion viaje :{{documentTarea.data.descripcion}}</p>
+        </ion-row>
+        <ion-button expand="block" color="primary"(click)="presentAlert()">Solicitar viaje</ion-button>
+        
+       
+      </ion-card-content>
+      
+      </ion-grid>
+      
+  
+      <br>
+      
+    </ion-item>
+    
+  </ion-list>
+  
+
+ 
+</ion-content>
+
